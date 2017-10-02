@@ -23,13 +23,13 @@
   
   This repository contains my homework, quizzes, and virtually every effort that I have made for **ICP2017F class**. The structure of the project is the following:
   
- - [Homework](Homework/): (the homework hyperlink should take the reader to the homework folder)
+ - [Homework](Homework/): 
   This directory contains all my homework submissions, each of which is a folder properly named with homework number, containing the homework submission.
   
- - [Quiz](quiz/): (the quiz hyperlink should take the reader to the quizzes folder)
+ - [Quiz](quiz/): 
   This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.
   
- - [Exam](Exam/): (the exam hyperlink should take the reader to the exams folder)
+ - [Exam](Exam/): 
   This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.
 
 For questions and troubleshooting, please contact:

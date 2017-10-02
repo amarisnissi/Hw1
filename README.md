@@ -34,8 +34,8 @@
 
 For questions and troubleshooting, please contact:
 
-Amaris Cerecerez
+Amaris Cerecerez <br />
 
-amarisnissi@yahoo.com
+amarisnissi@yahoo.com <br />
 
 (+1)(915)-422-9999

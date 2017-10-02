@@ -11,7 +11,7 @@
  
  **University:** The University of Texas at Austin
  
- **Level:** Undergraduate - <Sophmore(2nd year)>
+ **Level:** Undergraduate - Sophmore(2nd year)
  
  **ICP Class Position:** Student
  
@@ -35,5 +35,7 @@
 For questions and troubleshooting, please contact:
 
 Amaris Cerecerez
+
 amarisnissi@yahoo.com
+
 (+1)(915)-422-9999

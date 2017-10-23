@@ -1,0 +1,78 @@
+1.  Describe, with an example MATLAB script, the difference between * and .* operators (basically what is the role of . in the later operator? (Hint: describe your answer by multiplying two matrices with each other.)
+
+Solution:
+>> a=[1 2 3 4]
+a =
+     1     2     3     4
+>> b=[2 4 6 8]
+
+b =
+     2     4     6     8
+>> format short
+>> a*b
+Error using  * 
+Inner matrix dimensions must agree.
+ 
+>> a.*b
+ans =
+     2     8    18    32
+>> Essentially, the . allows us to specifically multiply matrixes.
+
+2.  Vector Dot-Product Vector dot-product in algebra is defined as the summation of the product of the elements of two vectors of the same size. For example,where ∑∑ denotes summation notation and nn is the number of elements of the vectors. Now, given your current knowledge of mathematical operators in MATLAB, what is the simplest way to get the result of the following dot-product of the two vectors AA and BB,
+A=[1,0,3]B=[2,3,7]
+
+Solution: 
+a=[1,0,3];
+>> b=[2,3,7];
+>> c=dot(a,b);
+>> disp(c);
+    23
+
+3.  (A) Write a MATLAB function named testString that takes as input, a string and then checks if the input string by the user is the equivalent to 'MATLAB. If it is the correct string, then returns logical value true as the function output, otherwise it returns false. Provide two tests of your function which result in true and false output.
+
+Solution:
+
+(B) One can argue that there are two basic ways of comparing two strings in MATLAB. one is using == operator, and the other is with the use of a MATLAB built-in function that we have repeatedly used in our lectures and homework. What is this function, and what is its difference with == operator. If you don’t remember this function’s name, then at least you should be able to explain the major flaw with string comparison using ==. Explain it with an example MATLAB script.
+
+Solution:
+Function b = testString(input);
+  b = logical(input,''MATLAB'');
+end
+
+testString(''MATLAB'') Start1 should return to input 1.
+testString(''MATLAB'') Start2 should return to input 0.
+%== does not work with strings since that tests to see if the strings are pointing to the same array.
+
+4.  If you recall from the lectures, MATLAB has two operators corresponding to logical operator OR: | and ||. There are two minor differences between the two if you recall from our discussions in class. One is about code efficiency, and the other relates to whether we are operating on logical vectors or scalars. Describe which operator improves code efficiency and why. For the second difference, you could also provide an example to describe what each operator does.
+
+Solution:
+In MATLAb, there are two operations corresponding to logical operations OR. The operation | typically used and related to operating with logical vectors and scalars. Meanwhile the || is used to be more code efficient in terms of integration and
+
+5.  Recall that in MATLAB true and false are equivalent to 0 and 1,
+>> true == 1
+ans =
+     1
+>> false == 0
+ans =
+     1
+Now knowing this, consider the following MATLAB calculation,
+>> a = 1;
+>> b = 0;
+>> x = a/b>10.0
+x =
+     1
+Note that 1/01/0 is mathematically undefined (but MATLAB by convention, assumes that 1/0≡∞1/0≡∞). Suppose MATLAB’s default behavior is not what you would like to get, that is, you don’t want x=1x=1 when b=0b=0, but instead x=0x=0. What would be the simplest change to the logical expression x=a/b>10.0 such that the result is x=0x=0 whenever b=0b=0.
+
+Solution: 
+>> x = a/b>10.0 && b==0
+
+6.  Array of Structures vs. Structures of Arrays. Suppose you would like to store information about students in a class. You create a array of structures like the following...Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t to write a paragraph.)
+
+Solution:
+Structures of Arrays seem the more feesably computationally efficient since the code comes off less typed and organizes the data in the corresponding array positions, making it easier to make out the structure fields.
+
+7.  Write a function getRoot() that takes in three coefficients (a,b,c)(a,b,c) of a quadratic equation ax2+bx+cax2+bx+c and outputs the roots of this equation as the function output result.
+
+Solution:
+
+

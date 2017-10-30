@@ -9,9 +9,9 @@ Y =
 >> Y=(1/(sqrt(2*pi)*sigma))*(exp(-0.5*((x-mu)/(sigma))^2))
 Y =
     0.1760
->> disp('For the values you entered here is the result of the gaussian probability density function');
-For the values you entered here is the result of the gaussian probability density function
->> disp(Y);
+disp('For the values you entered here is the result of the gaussian probability density function');
+    For the values you entered here is the result of the gaussian probability density function
+disp(Y);
     0.1760
 end
 
@@ -20,8 +20,8 @@ end
 >> Ty=70;
 >> T0=4;
 >> Tr=20;
->> answer = (67^(2/3))*3.7*(1.038^1/3)*log(0.76*(4-100)/(70-100))/(5.4*10^(-3)*pi*pi*(4*pi/3)^2/3);
->> disp(strcat('From the fridge it is ', num2str(answer), 'seconds'));
+answer = (67^(2/3))*3.7*(1.038^1/3)*log(0.76*(4-100)/(70-100))/(5.4*10^(-3)*pi*pi*(4*pi/3)^2/3);
+disp(strcat('From the fridge it is ', num2str(answer), 'seconds'));
       From the fridge it is 60.2107 seconds
 end
 
@@ -38,7 +38,7 @@ else
     polar = "Be sure that the input is a structure with fields 'x' and 'y'";
 end
 %% The function getCart(inputPolarStruct). %%
->> function cartesian = getCart(inputPolarStruct)
+function cartesian = getCart(inputPolarStruct)
 if (isfield((inputPolarStruct),'r') && isfield((inputPolarStruct),'phi'))
     x = inputPolarStruct.r*cos(inputPolarStruct.phi);
     y = inputPolarStruct.r*sin(inputPolarStruct.phi);
@@ -97,14 +97,14 @@ end
 
 6. Solution:
 function trianglearea = getTriangleArea(vertices)   
-    if(isfield((vertices),'x') && isfield((vertices),'y'))
+    if(isfield((vertices),'x') && isfield((vertices),'y')) 
         x1 = vertices(1).x;
         x2 = vertices(2).x;
         x3 = vertices(3).x;
         y1 = vertices(1).y;
         y2 = vertices(2).y;
         y3 = vertices(3).y;
-        %For convenience of actual function readibility
+        %% For actual function readibility. %%
         trianglearea = 0.5*abs(x2*y3-x3*y2-x1*y3+x3*y1+x1*y2-x2*y1);
     else
         trianglearea = 'It is not an appropriate input';
@@ -113,15 +113,15 @@ end
 
 7. Solution:
 function prime = isPrime(number)
-   if(number == 2)           % An easy base case
+   if(number == 2)           %% An easy base case. %%
        prime = true;
-   elseif(number<2 || mod(number,2)==0)  % Another easy base case
+   elseif(number<2 || mod(number,2)==0)  %% Another easy base case. %%
        prime = false;
    else
-       prime = isdivisibleby(number,round(number/2));  % Most useful line of code for this function
+       prime = isdivisibleby(number,round(number/2));  %% Most useful line of code for this function. %%
 end
-function divisible = isdivisibleby(number,factor) %This function uses the recursion principle
-    if (factor == 1) % base case
+function divisible = isdivisibleby(number,factor) %% Function uses the recursion principle %%
+    if (factor == 1) %% base case %%
         divisible = true;
     elseif(mod(number,factor)==0)
         divisible = false;
@@ -134,7 +134,7 @@ end
 function general = genFunc(varargin)
     arr = cell2mat(varargin);
     if(isnumeric(arr(1)) == false)
-         error('Dude, these arguments are not real numbers');
+         error('These are not real numbers');
     elseif(size(arr,2)==0)
         a = 0; b = 0; c = 0;
     elseif(size(arr,2)==1)
@@ -144,13 +144,10 @@ function general = genFunc(varargin)
     elseif(size(arr,2)==3)
         a = arr(1); b = arr(2); c = arr(3);
     else
-        error('Dude, thats too many inputs');
+        error('That has too many inputs');
     end
     general = @evalfunc;
-
    function y = evalfunc(x)
        y = a*x*x + b*x + c;
-      
    end
-
 end

@@ -29,3 +29,12 @@ end
 
 where MM is the mass of egg, ρρ is the density, cc is the specific heat capacity, and KK is thermal conductivity. Relevant values are M=47 [g]M=47 [g] for a small egg and M=67 [g]M=67 [g] for a large egg, ρ=1.038 [g cm−3]ρ=1.038 [g cm−3], c=3.7 [J g−1 K−1]c=3.7 [J g−1 K−1], and K=5.4×10−3 [Wcm−1K−1]K=5.4×10−3 [Wcm−1K−1]. Furthermore, TwTw is the temperature (in C degrees) of the boiling water, and T0T0 is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a MATLAB program, set Tw=100∘CTw=100∘C and Ty=70∘CTy=70∘C, and compute tt for a large egg taken from the fridge (T0=4∘CT0=4∘C) and from room temperature (T0=20∘CT0=20∘C). (Hint: Note that for this problem you will need to use MATLAB’s builtin function log(), and the predefined variable pi.)
 
+Answer:
+>> Tw=100;
+>> Ty=70;
+>> T0=4;
+>> Tr=20;
+>> answer = (67^(2/3))*3.7*(1.038^1/3)*log(0.76*(4-100)/(70-100))/(5.4*10^(-3)*pi*pi*(4*pi/3)^2/3);
+>> disp(strcat('From the fridge it is ', num2str(answer), 'seconds'));
+      From the fridge it is 60.2107 seconds
+end

@@ -19,11 +19,11 @@
       end
       
 2. function timeFacFuncs(n)
-   f = @() getFacWhile(n);
+   f = () getFacWhile(n);
        disp(char(9) 'Average runtime: ', num2str(timeit(f)));
-   f = @() getFacFor(n);
+   f = () getFacFor(n);
      disp(char(9) 'Average runtime: ', num2str(timeit(f)));
-   f = @() getFacVec(n);
+   f = () getFacVec(n);
        disp(char(9) 'Average runtime: ', num2str(timeit(f)));
 
 EXTRA CREDIT

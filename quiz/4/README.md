@@ -20,11 +20,11 @@
       
 2. function timeFacFuncs(n)
    f = () getFacWhile(n);
-       disp(char(9) 'Average runtime: ', num2str(timeit(f)));
+       disp(char(8) 'Average runtime: ', num2str(timeit(f)));
    f = () getFacFor(n);
-     disp(char(9) 'Average runtime: ', num2str(timeit(f)));
+     disp(char(8) 'Average runtime: ', num2str(timeit(f)));
    f = () getFacVec(n);
-       disp(char(9) 'Average runtime: ', num2str(timeit(f)));
+       disp(char(8) 'Average runtime: ', num2str(timeit(f)));
 
 EXTRA CREDIT
 

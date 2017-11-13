@@ -1,4 +1,5 @@
-1. a) WHILE LOOP
+1. 
+a) WHILE LOOP
 
 function convert = convertTempWhile(InVec,statement)
 convert = zeros(1,length(InVec));

@@ -1,8 +1,8 @@
 1.  Creating random 3-member student groups for the semester project.
 
 >> function output = Rand3Group()
-rng(131313);    %Initializes the seed so the number regenereates every time.%
-triples = randperm(99);  %The array of numbers 1-99 is randomized.%
+rng(131313);    % Initializes the seed so the number regenereates every time. %
+triples = randperm(99);  % The array of numbers 1-99 is randomized. %
 fileID = fopen('students.csv');
 mytable = readtable('students.csv');
 output = cell(33,3);

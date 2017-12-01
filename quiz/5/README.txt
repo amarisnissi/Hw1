@@ -21,7 +21,6 @@ function output = robustWebRead(inputstring)
     end
 end
 
-
 3.  What is the difference between gca and gcf keywords in MATLAB? (what does each one do?)
 
 gcf returns the current figure handle. If a particular figure does not exist in MATLAb, then gcf creates a figure and returns to its original handle. You can use the figure handle to alter figure properties.
